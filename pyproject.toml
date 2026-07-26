@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dupefinder-cli"
+version = "1.0.0"
+description = "Find duplicate files in a directory tree by content hash, and optionally delete or move them."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "All Rights Reserved" }
+authors = [{ name = "sidcore-dev" }]
+keywords = ["duplicates", "files", "cli", "cleanup"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+dupefinder-cli = "dupefinder_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
